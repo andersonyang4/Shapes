@@ -42,7 +42,7 @@ public class Cuboid extends Shape {
 	}
 	//Getter for Depth
 	public void setDepth(float depth) {
-		//Depth cann't be less than 0, if so, throw error message
+		//Depth can't be less than 0, if so, throw error message
 		if (depth < 0) {
 			throw new IllegalArgumentException("Radius cannot be less than 0.");
 		}
@@ -50,6 +50,7 @@ public class Cuboid extends Shape {
 	}
 	
 	//constructor for Cuboid
+	//use throws illegalargumentexception between ()  and {}
 	public Cuboid (float width, float height, float depth) {
 		
 		setWidth(width);
@@ -58,7 +59,6 @@ public class Cuboid extends Shape {
 		
 	} 
 	
-
 	@Override
 	public float surfaceArea() {
 		//formula for Cuboid surface area = 2 (wd + hd + hw) 

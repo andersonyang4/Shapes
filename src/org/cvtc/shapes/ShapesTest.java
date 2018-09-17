@@ -8,8 +8,8 @@ public class ShapesTest {
 	
 	public static void main (String[] args) {
 		
-		//Creating an instance of cuboid, cylinder, and sphere while giving it static values
-		Cuboid cuboid = new Cuboid(1, 2, 3);
+		//Creating an instance of cuboid, cylinder, and sphere giving it static values
+		Cuboid cuboid = new Cuboid(4, 12, 15);
 		Cylinder cylinder = new Cylinder (4, 12);
 		Sphere sphere = new Sphere(5);
 		
