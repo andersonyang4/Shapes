@@ -1,13 +1,25 @@
 package org.cvtc.shapes;
 
-import javax.swing.JOptionPane;
+import java.awt.Component;
+import javax.swing.Renderer;
 
-public class Cuboid extends Shape {
+public class Cuboid extends Shape implements Renderer {
 	
 	//fields
 	private float width = 0.0f;
 	private float height = 0.0f;
 	private float depth = 0.0f;
+	
+	
+	//constructor for Cuboid
+	public Cuboid(Dialog messageBox, float width, float height, float depth) {
+			super(messageBox);
+			setWidth(width);
+			setHeight(height);
+			setDepth(depth);
+			
+	} 
+	
 	
 	//Getter for Width
 	public float getWidth() {
@@ -49,15 +61,7 @@ public class Cuboid extends Shape {
 		this.depth = depth;
 	}
 	
-	//constructor for Cuboid
-	//use throws illegalargumentexception between ()  and {}
-	public Cuboid (float width, float height, float depth) {
-		
-		setWidth(width);
-		setHeight(height);
-		setDepth(depth);
-		
-	} 
+	
 	
 	@Override
 	public float surfaceArea() {
@@ -74,13 +78,23 @@ public class Cuboid extends Shape {
 	@Override
 	public void render() {
 		//message dialog showing Cuboid, width, height, depth, surface area, and volume
-		JOptionPane.showMessageDialog(null, "Cuboid" + "\n" + "Width is: " + getWidth() + "\n" + "Height is: " 
+		getMessageBox().show("Cuboid" + "\n" + "Width is: " + getWidth() + "\n" + "Height is: " 
 				+ getHeight() + "\n" + "Depth is: " + getDepth() + "\n" + "Surface area is: " + surfaceArea() + "\n" 
-				+ "Volume is: " + volume());
+				+ "Volume is: " + volume(), "Cuboid");
 	}
 
-	
 
-	
+	@Override
+	public void setValue(Object aValue, boolean isSelected) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public Component getComponent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

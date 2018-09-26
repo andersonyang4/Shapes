@@ -9,9 +9,9 @@ public class ShapesTest {
 	public static void main (String[] args) {
 		
 		//Creating an instance of cuboid, cylinder, and sphere giving it static values
-		Cuboid cuboid = new Cuboid(2, 4, 6);
-		Cylinder cylinder = new Cylinder (4, 2);
-		Sphere sphere = new Sphere(5);
+		Cuboid cuboid = new Cuboid(new MessageBox(), 2, 4, 6);
+		Cylinder cylinder = new Cylinder (new MessageBox(), 4, 2);
+		Sphere sphere = new Sphere(new MessageBox(), 5);
 		
 		//Render message to show shapes dimensions, surface area, and volume
 		cuboid.render();
