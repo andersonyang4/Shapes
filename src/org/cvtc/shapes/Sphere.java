@@ -26,6 +26,11 @@ public class Sphere extends Shape implements Renderer{
 		super(messageBox);
 		setRadius(radius);
 	}
+	
+	
+	public Sphere(Dialog dialog) {
+		super(dialog);
+	}
 
 	@Override
 	public float surfaceArea() {

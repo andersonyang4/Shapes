@@ -1,5 +1,4 @@
 package org.cvtc.shapes;
-//test 
 import java.awt.Component;
 import javax.swing.Renderer;
 
@@ -20,6 +19,9 @@ public class Cuboid extends Shape implements Renderer {
 			
 	} 
 	
+	public Cuboid(Dialog dialog) {
+		super(dialog);
+	}
 	
 	//Getter for Width
 	public float getWidth() {

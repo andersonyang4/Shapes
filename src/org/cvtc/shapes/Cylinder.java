@@ -39,7 +39,9 @@ public class Cylinder extends Shape implements Renderer {
 		setHeight(height);
 	}
 	
-	
+	public Cylinder(Dialog dialog) {
+		super(dialog);
+	}
 	
 	@Override
 	public float surfaceArea() {
@@ -60,11 +62,5 @@ public class Cylinder extends Shape implements Renderer {
 				+ "Height is: " + getHeight() + "\n" + "Surface area is: " + surfaceArea() + "\n" 
 				+ "Volume is: " + volume(), "Cylinder");
 	}
-
-	
-
-	
-	
-	
 
 }
